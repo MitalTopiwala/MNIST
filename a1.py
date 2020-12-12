@@ -204,11 +204,6 @@ def gd_logreg(lrate):
     global Xtest
     global Ttrain
     global Ttest
-    #print(Xtrain)
-    #print(Xtest)
-    #print(Ttrain)
-    #print(Ttest)
-    #Cross Entropy function (loss) :t*np.logaddexp(0,-z) + (1-t)*np.logaddexp(0,z)
     rnd.seed(3)
     N = Xtrain.shape[1]
     weights = rnd.rand(N+1) / 1000 #weights + bias term
@@ -299,13 +294,11 @@ def gd_logreg(lrate):
 
 gd_logreg(1)
 
-#NOTE: 5 i) j) k) I don’t know
 
 
 print("Question 6:")
 print("----------") 
 
-#print("Question 6(a):")
 def get_index_nums(target, nums, input):
   arr = np.logical_or(target == nums[0], target == nums[1])
   return input[arr]
